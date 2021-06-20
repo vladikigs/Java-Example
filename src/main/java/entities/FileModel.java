@@ -281,12 +281,14 @@ public class FileModel
         public class Customization
         {
             public Goback goback;
+            public Logo logo;
             public Boolean forcesave;
             public Boolean submitForm;
 
             public Customization()
             {
                 forcesave = false;
+                logo = new Logo();
                 goback = new Goback();
             }
 
@@ -294,6 +296,13 @@ public class FileModel
             {
                 public String url;
             }
+        }
+
+        public class Logo
+        {
+            public String image = DocumentManager.GetServerUrl(true) + "/css/img/logo_editor.png";
+            public String imageEmbedded = DocumentManager.GetServerUrl(true) + "/css/img/logo_editor_em.png";
+            public String url = "https://github.com/vladikigs/";
         }
 
         public class Embedded
